@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/enterUsername">
+
+    <fragment
+        android:id="@+id/enterUsername"
+        android:name="com.example.simplegamespads.EnterUsername"
+        android:label="Simple Games"
+        tools:layout="@layout/fragment_enter_username">
+        <action
+            android:id="@+id/action_enterUsername_to_gameMenu"
+            app:destination="@id/gameMenu"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameMenu"
+        android:name="com.example.simplegamespads.GameMenu"
+        android:label="Menu"
+        tools:layout="@layout/fragment_game_menu">
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_gameMenu_to_quizz_game_playing"
+            app:destination="@id/quizz_game_playing"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_gameMenu_to_guessGamePlaying"
+            app:destination="@id/guessGamePlaying"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizz_game_playing"
+        android:name="com.example.simplegamespads.QuizzGamePlaying"
+        android:label="Quizz Game"
+        tools:layout="@layout/fragment_quizz_game_playing">
+        <action
+            android:id="@+id/action_quizz_game_playing_to_quizz_game_result"
+            app:destination="@id/quizz_game_result"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizz_game_result"
+        android:name="com.example.simplegamespads.QuizzGameResult"
+        android:label="Quizz Game"
+        tools:layout="@layout/fragment_quizz_game_result">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_quizz_game_result_to_gameMenu"
+            app:destination="@id/gameMenu"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/enterUsername" />
+    </fragment>
+    <fragment
+        android:id="@+id/guessGamePlaying"
+        android:name="com.example.simplegamespads.GuessGamePlaying"
+        android:label="Guess Game"
+        tools:layout="@layout/fragment_guess_game_playing">
+        <action
+            android:id="@+id/action_guessGamePlaying_to_guessGameResult"
+            app:destination="@id/guessGameResult"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/guessGameResult"
+        android:name="com.example.simplegamespads.GuessGameResult"
+        android:label="Guess Game"
+        tools:layout="@layout/fragment_guess_game_result">
+        <action
+            android:id="@+id/action_guessGameResult_to_gameMenu"
+            app:destination="@id/gameMenu"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/enterUsername" />
+        <argument
+            android:name="win"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutMenu"
+        android:name="com.example.simplegamespads.AboutMenu"
+        android:label="About"
+        tools:layout="@layout/fragment_about_menu" />
+</navigation>

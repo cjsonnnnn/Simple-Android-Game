@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/aboutMenu"
+        android:menuCategory="secondary"
+        android:title="About"
+        app:showAsAction="never" />
+</menu><!--        android:icon="@drawable/question_mark"-->
+    <!--    android:menuCategory="secondary" > is used to whenever the back button is pressed from fragment inside menu, it will redirect to the last fragment where that the fragment inside menu is called-->

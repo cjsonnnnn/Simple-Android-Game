@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Simple Games PADS</string>
+    <string name="start_label">Start</string>
+    <string name="game_menu_label">What do you want to play for today?</string>
+    <string name="first_game_name">Simple Quizz Game</string>
+    <string name="second_game_name">Simple Guess Game</string>
+    <string name="true_label">TRUE</string>
+    <string name="false_label">FALSE</string>
+    <string name="score_label">Your score is</string>
+    <string name="ok_label">OK</string>
+    <string name="try_again_label">Try Again</string>
+    <string name="guess_label">Guess It!</string>
+    <string name="win_label">You Win!</string>
+    <string name="lose_label">You Lose!</string>
+    <string name="name_label">Jason Caleb Erwin Piay</string>
+    <string name="nim_label">202001240</string>
+</resources>
